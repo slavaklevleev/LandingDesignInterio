@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAROinterio</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__content">
+            <div class="contact_block">
+                <img src="assets/address.svg" alt="address" class="icon" />
+                <p>Цветной бульвар, 32А</p>
+            </div>
+            <div class="contact_block">
+                <img src="assets/phone.svg" alt="phone" class="icon" />
+                <a href="tel:+79951404469">+7 (995) 140-44-69</a>
+            </div>
+            <div class="contact_block">
+                <img src="assets/email.svg" alt="email" class="icon" />
+                <a href="mailto:carointerio@gmail.com">carointerio@gmail.com</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <div>
+                <h1 class="title">
+                    CAROinterio
+                </h1>
+                <h2 class="title">
+                    архитектурная студия
+                </h2>
+            </div>
+            <div>
+                <a href="#contacts" class="btn">связаться</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="citation fade-in">
+        <div class="container">
+            <p>
+                Дизайн интерьера&nbsp;&mdash; это не&nbsp;просто красивая картинка, это умение создавать качество жизни
+                и&nbsp;ее&nbsp;красоту,
+                которая питает душу!
+            </p>
+        </div>
+    </section>
+
+    <section class="about fade-in">
+        <div class="container">
+            <div>
+                <h3>О нас</h3>
+                <p>Мы&nbsp;архитектурная студия, вот уже более 25&nbsp;лет занимаемся дизайном интерьера</p>
+                <p><strong>CAROinterio</strong>&nbsp;&mdash; занимается разработкой и&nbsp;реализацией проектов</p>
+                <p><strong>LBF &ldquo;Leading Brands Furnitures&rdquo;</strong>&nbsp;&mdash; занимается оснащением наших
+                    объектов мебелью и&nbsp;аксессуарами</p>
+                <p>Наша главная цель&nbsp;&mdash; это создание элегантного интерьера, который будет актуален вне
+                    времени!</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/img_2.png" alt="about" class="about__img" />
+
+                <p class="image-text">
+                    Анастасия Баранова<br>ведущий дизайнер
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects fade-in">
+        <div class="container">
+            <h3>Наши проекты</h3>
+            <div class="projects__content">
+                <img src="assets/projects/1.png" alt="project1" class="project__img" id="p1" />
+                <img src="assets/projects/2.png" alt="project2" class="project__img" id="p2" />
+                <img src="assets/projects/3.png" alt="project3" class="project__img" id="p3" />
+                <img src="assets/projects/4.png" alt="project4" class="project__img" id="p4" />
+            </div>
+        </div>
+    </section>
+
+    <section class="details fade-in">
+        <div class="container">
+            <h3>детали имеют значение</h3>
+            <div class="masonry">
+                <img src="assets/details/1.png" id="i1" />
+                <img src="assets/details/3.png" id="i3" />
+                <img src="assets/details/5.png" id="i5" />
+                <img src="assets/details/2.png" id="i2" />
+                <img src="assets/details/4.png" id="i4" />
+                <img src="assets/details/6.png" id="i6" />
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts fade-in" id="contacts">
+        <h3>Контакты</h3>
+        <div class="container">
+            <div class="infoblock">
+                <p>
+                    <span>Время работы:</span><br />Пн-Пт 10:00-18:00
+                </p>
+                <p style="margin-bottom: 0px">
+                    <span>Офис/Шоу-рум:</span>
+                </p>
+                <div class="contact_block">
+                    <img src="assets/address.svg" alt="phone" class="icon" />
+                    <p style="margin-bottom: 0px">Цветной бульвар, 32А</p>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="infoblock">
+                <div class="contact_block">
+                    <img src="assets/phone.svg" alt="phone" class="icon" />
+                    <a href="tel:+79951404469">+7 (995) 140-44-69</a>
+                </div>
+                <div class="contact_block">
+                    <img src="assets/email.svg" alt="email" class="icon" />
+                    <a href="mailto:carointerio@gmail.com" style="text-decoration: underline;">carointerio@gmail.com</a>
+                </div>
+                <div class="contact_block">
+                    <img src="assets/insta.svg" alt="insta" class="icon" />
+                    <a href="https://www.instagram.com/lecaro_studio/">@LECARO_STUDIO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+      
+        document.querySelectorAll('.fade-in').forEach(el => {
+          observer.observe(el);
+        });
+      </script>
+</body>
+
+</html>
